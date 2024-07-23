@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Parkowe Zagadki</title>
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body {
+      background-color: #f8e0e6; 
+    }
+
+    .swal2-confirm.custom-confirm {
+            background-color: #89CFF0 !important; 
+            color: white !important;
+            border-color:  #89CFF0 !important;
+        }
+
+        .swal2-confirm.custom-confirm-2 {
+            background-color: #38ad30 !important; 
+            color: white !important;
+            border-color:  #38ad30 !important;
+        }
+
+    .center-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 30vh;
+
+    }
+
+    .header-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 10vh; 
+
+    }
+
+    .title {
+      font-size: 24px;
+      color: #333;
+      margin-bottom: 20px; 
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    input[type="radio"] {
+      display: none;
+    }
+
+    input[type="radio"] + label {
+      display: inline-block;
+      padding: 10px 20px;
+      border: 2px solid #89CFF0;
+      border-radius: 20px;
+      background-color: #fff;
+      color: #89CFF0;
+      cursor: pointer;
+      transition: background-color 0.3s, color 0.3s;
+      margin: 0 10px; 
+    }
+
+    input[type="radio"]:checked + label {
+      background-color: #89CFF0;
+      color: #fff;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1 class="text-center mt-5" style="font-family:Papyrus">Witaj w parkowych urodzinowych zagadkach! &#129303;</h1>
+    <p class="lead text-center">Mam dla ciebie parę pytań. Odpalać koparke?</p>
+  </div>
+
+
+  <div class="header-container" > 
+    </div>
+  <div class="center-container c1" > 
+    
+    <div>
+        <div class="title">Jakiej wspólnej aktywności nie robiliśmy w tym parku?</div>
+
+      <input type="radio" id="radio1" name="radioGroup" class="wrong" />
+      <label for="radio1">Pikniczek z malowaniem obrazów</label>
+
+      <input type="radio" id="radio2" name="radioGroup" />
+      <label for="radio2">Pływanie na plaży</label>
+
+      <input type="radio" id="radio3" name="radioGroup" class="wrong"/>
+      <label for="radio3">Ogladanie serialu w nocy na tyłach samochodu</label>
+
+      <input type="radio" id="radio4" name="radioGroup" class="wrong"/>
+      <label for="radio4">Rolkowanie w nocy</label>
+    </div>
+  </div>
+
+  <div class="center-container c2" style="display:none">
+    
+    <div>
+        <div class="title">Co przedstawiał obraz który namalowałem na wspólnym pikniku?</div>
+
+      <input type="radio" id="radio5" name="radioGroup2" class="wrong"/>
+      <label for="radio5">Panią w huście z kogutem</label>
+
+      <input type="radio" id="radio6" name="radioGroup2" class="wrong"/>
+      <label for="radio6">Auto jadące drogą nocą</label>
+
+      <input type="radio" id="radio7" name="radioGroup2" />
+      <label for="radio7">Drzewo które wygląda jak jakiś robak</label>
+
+      <input type="radio" id="radio8" name="radioGroup2" class="wrong"/>
+      <label for="radio8">Odbiłem nasze dłonie i napisałem coś co brzmi jak tekst na nagrobku</label>
+    </div>
+  </div>
+
+  
+  <div class="center-container c3" style="display:none"> 
+    
+    <div>
+        <div class="title">W ktorym parku mielimy bitwę na śnieżki i potem karmiliśmy kaczki?</div>
+
+      <input type="radio" id="radio9" name="radioGroup3" class="wrong"/>
+      <label for="radio9">W tym (of kors)</label>
+
+      <input type="radio" id="radio10" name="radioGroup3" class="wrong"/>
+      <label for="radio10">W parku w arturówku</label>
+
+      <input type="radio" id="radio11" name="radioGroup3" class="wrong"/>
+      <label for="radio11">W parku przy pasażu</label>
+
+      <input type="radio" id="radio12" name="radioGroup3" />
+      <label for="radio12">W parku Na Młynku</label>
+    </div>
+  </div>
+
+  <div class="center-container c4" style="display:none"> 
+    
+    <div>
+        <div class="title">W jakiej wspólnej aktywność plastycznej najmniej sobie radziłem, a ci szła świetnie?</div>
+
+      <input type="radio" id="radio14" name="radioGroup4"/>
+      <label for="radio14">toczenie na kole</label>
+
+      <input type="radio" id="radio15" name="radioGroup4" class="wrong"/>
+      <label for="radio15">lepienie z gliny roznych figurek</label>
+
+      <input type="radio" id="radio16" name="radioGroup4" class="wrong"/>
+      <label for="radio16">tańczenie</label>
+
+      <input type="radio" id="radio17" name="radioGroup4" class="wrong"/>
+      <label for="radio17">malowanie farbami</label>
+    </div>
+  </div>
+
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.js"></script>
+
+  <script>
+
+
+        $(document).ready(function() {
+
+            $('input[type="radio"].wrong').change(function() {
+                Swal.fire({
+                    title: 'Błond',
+                    text: 'Nie było tak! i literówka jest specjalnie w celach komediowych',
+                    icon: 'error',
+                    confirmButtonText: 'Poprawię się',
+                    customClass: {
+                        confirmButton: 'custom-confirm',
+                    }
+                });
+                });
+
+                
+            $('#radio2').change(function() {
+                if ($(this).is(':checked')) {
+                    $('.c2').show();
+                } 
+            });
+
+            $('#radio7').change(function() {
+                if ($(this).is(':checked')) {
+                    $('.c3').show();
+                } 
+            });
+
+            $('#radio12').change(function() {
+                if ($(this).is(':checked')) {
+                    $('.c4').show();
+                } 
+            });
+
+            $('#radio14').change(function() {
+                if ($(this).is(':checked')) {
+                    Swal.fire({
+                    title: 'Twój kod to 307',
+                    text: 'Gratulacje. Udało Ci się przejść przez moje zagadki',
+                    icon: 'success',
+                    confirmButtonText: 'Zapamiętam',
+                    customClass: {
+                        confirmButton: 'custom-confirm-2',
+                    }
+                });
+                }
+            });
+        });
+
+  </script>
+</body>
+</html>
