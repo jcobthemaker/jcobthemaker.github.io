@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mieszkaniowe Zagadki</title>
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body {
+      background-color: #89CFF0;
+    }
+
+    .swal2-confirm.custom-confirm {
+      background-color: #f8e0e6 !important;
+      color: white !important;
+      border-color: #f8e0e6 !important;
+    }
+
+    .swal2-confirm.custom-confirm-2 {
+      background-color: #38ad30 !important;
+      color: white !important;
+      border-color: #38ad30 !important;
+    }
+
+    .center-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 30vh;
+
+    }
+
+    .row {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .header-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 10vh;
+
+    }
+
+    .title {
+      font-size: 24px;
+      color: #333;
+      margin-bottom: 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    input[type="radio"] {
+      display: none;
+    }
+
+    input[type="radio"]+label {
+      display: inline-block;
+      padding: 10px 20px;
+      border: 2px solid #f8e0e6;
+      border-radius: 20px;
+      background-color: #fff;
+      color: #c4327b;
+      cursor: pointer;
+      transition: background-color 0.3s, color 0.3s;
+      margin: 0 10px;
+    }
+
+    input[type="radio"]:checked+label {
+      background-color: #f8e0e6;
+      color: #fff;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <h1 class="text-center mt-5" style="font-family:Papyrus">Witaj w mieszkaniowych urodzinowych zagadkach! &#128704;
+    </h1>
+    <p class="lead text-center">Widzę, że udało ci się znaleść uryty kod. Tak jak objecałem czekają Cię zagadki na nasz
+      temat. Zaczyanmy?</p>
+  </div>
+
+
+  <div class="header-container">
+  </div>
+  <div class="center-container c1">
+
+    <div>
+      <div class="title">Jaki domowy sprzęt lubiał spacerować?</div>
+
+      <input type="radio" id="radio1" name="radioGroup" class="wrong" />
+      <label for="radio1">Mikrofala</label>
+
+      <input type="radio" id="radio2" name="radioGroup" class="wrong" />
+      <label for="radio2">Talerze</label>
+
+      <input type="radio" id="radio3" name="radioGroup" class="wrong" />
+      <label for="radio3">Kanapa</label>
+
+      <input type="radio" id="radio4" name="radioGroup" />
+      <label for="radio4">Pralka</label>
+    </div>
+  </div>
+
+  <div class="center-container c2" style="display:none">
+
+    <div>
+      <div class="title">Jaką serię filmów zbingowaliśmy w pierwszych miesiącach mieszkania w tym miejscu?</div>
+      <div class="row">
+        <input type="radio" id="radio5" name="radioGroup2" />
+        <label for="radio5">Harry Potter</label>
+
+        <input type="radio" id="radio6" name="radioGroup2" class="wrong" />
+        <label for="radio6">Star Wars</label>
+
+        <input type="radio" id="radio7" name="radioGroup2" class="wrong" />
+        <label for="radio7">Filmy studia Ghibli</label>
+
+        <input type="radio" id="radio8" name="radioGroup2" class="wrong" />
+        <label for="radio8">The kissing booth</label>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="center-container c3" style="display:none">
+
+    <div>
+
+      <div class="title">Kiedys przy żabce twojej mamy uratowliśmy zwierzaczka późnym wieczorem. Co to był za zwierzak?
+      </div>
+      <div class="row">
+        <input type="radio" id="radio9" name="radioGroup3" class="wrong" />
+        <label for="radio9">gołąbek</label>
+
+        <input type="radio" id="radio10" name="radioGroup3" class="wrong" />
+        <label for="radio10">rudy kotek</label>
+
+        <input type="radio" id="radio11" name="radioGroup3" />
+        <label for="radio11">czarny kundelek</label>
+
+        <input type="radio" id="radio12" name="radioGroup3" class="wrong" />
+        <label for="radio12">duży doberman</label>
+      </div>
+    </div>
+  </div>
+
+  <div class="center-container c4" style="display:none">
+
+    <div>
+      <div class="title">Jakie było jedno z pierwszych dań jakie zrobłem Ci na działeczce?</div>
+      <div class="row">
+        <input type="radio" id="radio14" name="radioGroup4" class="wrong" />
+        <label for="radio14">spalone pierogi</label>
+
+        <input type="radio" id="radio15" name="radioGroup4" class="wrong" />
+        <label for="radio15">lagasne na stole</label>
+
+        <input type="radio" id="radio16" name="radioGroup4" class="wrong" />
+        <label for="radio16">pancakes</label>
+
+        <input type="radio" id="radio17" name="radioGroup4" />
+        <label for="radio17">makaron z serem i kurczakiem</label>
+      </div>
+    </div>
+  </div>
+  
+
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.js"></script>
+
+  <script>
+
+
+    $(document).ready(function () {
+
+      $('input[type="radio"].wrong').change(function () {
+        Swal.fire({
+          title: 'Błędna odpowiedź',
+          text: 'Otóż tak nie było',
+          icon: 'error',
+          confirmButtonText: 'Poprawię się',
+          customClass: {
+            confirmButton: 'custom-confirm',
+          }
+        });
+      });
+
+
+      $('#radio4').change(function () {
+        if ($(this).is(':checked')) {
+          $('.c2').show();
+        }
+      });
+
+      $('#radio5').change(function () {
+        if ($(this).is(':checked')) {
+          $('.c3').show();
+        }
+      });
+
+      $('#radio11').change(function () {
+        if ($(this).is(':checked')) {
+          $('.c4').show();
+        }
+      });
+
+      $('#radio17').change(function () {
+        if ($(this).is(':checked')) {
+          Swal.fire({
+            title: 'Udało Ci się.',
+            text: 'Widzę, że dobrze pamiętasz nasze wspomnienia. Aby kontynuować przygodę sprawdź maila',
+            icon: 'success',
+            confirmButtonText: 'Już patrzę',
+            customClass: {
+              confirmButton: 'custom-confirm-2',
+            }
+          });
+        }
+      });
+    });
+
+  </script>
+</body>
+
+</html>
