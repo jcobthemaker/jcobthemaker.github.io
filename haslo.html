@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Protected Page</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            align-items: center;
+            height: 100vh;
+            text-align: center;
+            padding: 20px;
+            background-image: url('tlo.jpg');
+            background-attachment: fixed;
+            background-size: 100% 100%;
+        }
+
+        input[type="password"] {
+            font-size: 7em;
+            width: 100%;
+            max-width: 1300px;
+            text-align: center;
+            border-radius: 10px;
+        }
+
+    </style>
+</head>
+<body>
+
+    <input type="password" class="form-control" id="passwordInput" maxlength="6" placeholder="Sekretne hasło to:">
+
+    <script>
+        $(document).ready(function() {
+            $('#passwordInput').on('input', function() {
+                var password = $(this).val();
+                if (password.length === 6) {
+                    if (password === 'kanapa') {
+                        window.location.href = "https://jcobthemaker.github.io/parkoweZagadki.html";
+                    } else{
+
+                    }
+                }
+            });
+        });
+    </script>
+
+</body>
+</html>
